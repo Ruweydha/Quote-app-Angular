@@ -1,0 +1,20 @@
+.icons{
+    display: flex;
+    justify-content: space-around;
+    clear: both;
+}
+.quotes{
+    width: 40%;
+    /* height: 200px; */
+    box-shadow: 5px 5px 5px grey;
+    padding: 15px;
+    margin: 1%;
+}
+.quotes-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.author{
+    float: right;
+}

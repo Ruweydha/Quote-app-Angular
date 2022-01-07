@@ -9,13 +9,17 @@
                 <p class="author">~ {{quote.author}}</p>
                 <div class="icons">
                     <div>
-                        <img src="https://img.icons8.com/material-rounded/48/000000/thumb-up.png"> {{quote.upVote}} Likes 
-                        <img src="https://img.icons8.com/material-rounded/48/000000/thumbs-down.png"/> {{quote.downVote}} Dislikes 
+                        <img src="https://img.icons8.com/material-rounded/48/000000/thumb-up.png"(click)='likes(i)'> {{quote.upVote}} Likes 
+                        <img src="https://img.icons8.com/material-rounded/48/000000/thumbs-down.png" (click)='dislikes(i)'> {{quote.downVote}} Dislikes 
                     </div>
                     <div>
-                        <img src="https://img.icons8.com/plasticine/50/000000/filled-trash.png" >
+                        <img src="https://img.icons8.com/plasticine/50/000000/filled-trash.png" (click) = 'deleteQuote(i)' >
                     </div>
                 </div>
+                <p class="mt-2">Published {{quote.publishDate|duration}} ago</p>
+                <button class="btn btn-success" (click)='toggleDetails(i)' >View details</button>
+                <div *ngIf='quote.showDetails'>
+                    <app-quotes-details  [quote]='quote'></app-quotes-details>
           </div>
         </div>
     </div>

@@ -9,6 +9,7 @@ import { QuotesDetailsComponent } from './quotes-details/quotes-details.componen
 import { QuotesComponent } from './quotes/quotes.component';
 import { VotesDirective } from './votes.directive';
 import { DurationPipe } from './duration.pipe';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DurationPipe } from './duration.pipe';
     QuotesDetailsComponent,
     QuotesComponent,
     VotesDirective,
-    DurationPipe
+    DurationPipe,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

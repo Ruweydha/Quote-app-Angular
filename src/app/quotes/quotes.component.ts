@@ -45,5 +45,19 @@ export class QuotesComponent implements OnInit {
     dislikes(index:any){
       this.quotes[index].downVote += 1
   }
+  upNum:number =0;
+  downNum:number =0;
+
+  mostLiked(){
+    
+    for( let votes:number =0; votes < this.quotes.length; votes++){
+      this.upNum = this.quotes[votes].upVote;
+      
+      if (this.upNum > this.downNum){
+        this.downNum= this.upNum
+      }      
+    }
+    return this.downNum
+  }
 
 }

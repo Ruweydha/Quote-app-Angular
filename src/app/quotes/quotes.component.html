@@ -5,7 +5,7 @@
          </div>
         <div class="quotes-container">
             <div class="quotes" *ngFor = 'let quote of quotes;let i = index'>
-                <p  id={{i}} >{{quote.quote}}</p>
+                <p  id={{i}}>{{quote.quote}}</p>
                 <p class="author">~ {{quote.author}}</p>
                 <div class="icons">
                     <div>
@@ -17,9 +17,10 @@
                     </div>
                 </div>
                 <p class="mt-2">Published {{quote.publishDate|duration}} ago</p>
-                <button class="btn btn-success" (click)='toggleDetails(i)' >View details</button>
+                <button class="btn btn-success" (click)='toggleDetails(i)' >View details</button> <br>
                 <div *ngIf='quote.showDetails'>
                     <app-quotes-details  [quote]='quote'></app-quotes-details>
+                </div>  
           </div>
         </div>
     </div>

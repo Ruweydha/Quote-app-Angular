@@ -12,6 +12,6 @@ export class QuotesDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  @Input() quote!:Quotes
+  @Input() quote!:Quotes;
 
 }

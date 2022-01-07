@@ -5,7 +5,9 @@
          </div>
         <div class="quotes-container">
             <div class="quotes" *ngFor = 'let quote of quotes;let i = index'>
-                <p  id={{i}}>{{quote.quote}}</p>
+
+                <p appVotes *ngIf="mostLiked()===quote.upVote && quote.upVote>0">{{quote.quote}}</p>
+                <p  *ngIf="mostLiked()!==quote.upVote || quote.upVote===0">{{quote.quote}}</p>
                 <p class="author">~ {{quote.author}}</p>
                 <div class="icons">
                     <div>

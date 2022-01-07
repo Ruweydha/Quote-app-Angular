@@ -14,17 +14,11 @@
       
                 <label for="Quote">Quote</label>
                 <textarea class="form-control" id="quote" rows="4" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" placeholder="Enter quote to publish" required></textarea>
-                <!-- <div [hidden]="quote.valid || quote.pristine">
-                  <p style="color: red;">Quote is required</p>
-                </div> -->
             </div>
             <div class="form-group">
       
                 <label for="author">Author</label>
                 <input type="text" class="form-control" id="author" rows="4" [(ngModel)]="newQuote.author" name="author" #author="ngModel" placeholder="Enter name of author" required>
-                <!-- <div [hidden]="author.valid || author.pristine">
-                  <p style="color: red;">Author is required</p>
-                </div> -->
             </div>
     
             <button type="submit" class="btn btn-success mt-3">Submit Quote</button>

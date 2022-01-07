@@ -6,7 +6,7 @@ import { Directive, ElementRef } from '@angular/core';
 export class VotesDirective {
   
   constructor(elem:ElementRef) {
-    elem.nativeElement.style.backgroundColor="green";
+    elem.nativeElement.style.backgroundColor="#BACEC2";
    }
 
 }
